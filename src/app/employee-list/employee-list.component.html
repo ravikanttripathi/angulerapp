@@ -1,0 +1,22 @@
+<table class="table">
+<tr>
+    <th>EMPLOYEE ID</th>
+    <th>EMPLOYEE NAME</th>
+    <th>EMPLOYEE PASSWORD</th>
+    <th>EMPLOYEE GENDER</th>
+    <th>EMPLOYEE ADDRESS</th>
+    <th>EMPLOYEE COUNTRY</th>
+    <th colspan="2">OPERATION</th>
+</tr>
+<tr *ngFor ="let e of employee">
+    <td>{{e.empId}}</td>
+    <td>{{e.empName}}</td>
+    <td>{{e.empPwd}}</td>
+    <td>{{e.emmGen}}</td>
+    <td>{{e.empAddr}}</td>
+    <td>{{e.empCounty}}</td>
+    <td><button class="btn btn-danger" (click)="deleteEmployee(e.empId)">DELETE</button></td>
+    <td><button class="btn btn-success" (click)="showEdit(e.empId)" >EDIT</button></td>
+</tr>
+</table>
+{{message}}

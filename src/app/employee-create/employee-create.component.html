@@ -1,0 +1,39 @@
+<h3>WELCOME TO EMPLOYEE FORM!!</h3>
+<form action="#" (ngSubmit)="createEmployee()" method="POST">
+ <div class="row">
+     <div class="col-2">Employee Name</div>
+   <div class="col-4"><input type="text" name="empName" id="empName" class="form-control" [(ngModel)]="employee.empName"></div>
+ </div>
+ <div class="row">
+    <div class="col-2">Employee Password</div>
+    <div class="col-4"><input type="password" [(ngModel)]="employee.empPwd" name="empPwd" id="empPwd" class="form-control"></div>
+</div>
+<div class="row">
+    <div class="col-2">Employee Gender</div>
+    <div class="col-4">
+        <label class="radio-inline"><input type="radio" [(ngModel)]="employee.emmGen" name="emmGen" id="emmGen" checked value="MALE">Male</label>
+        <label class="radio-inline"><input type="radio" [(ngModel)]="employee.emmGen" name="emmGen" value="FEMALE">Female</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">Employee Address</div>
+    <div class="col-4"><textarea class="form-control"  [(ngModel)]="employee.empAddr" rows="2" id="empAddr" name="empAddr"></textarea></div>
+</div>
+<div class="row">
+    <div class="col-2">Employee Country</div>
+    <div class="col-4">
+        <select id="empCounty" name="empCounty" [(ngModel)]="employee.empCounty">
+            <option>--SELECT--</option>
+            <option value="INDIA">INDIA</option>
+            <option value="CANADA">CANADA</option>
+            <option value="LONDAN">LONDAM</option>
+          </select>
+        </div>
+</div>
+<p></p>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-4"><input type="submit"value="SAVE" class="btn btn-success"></div>
+</div>
+</form>
+{{message}}
